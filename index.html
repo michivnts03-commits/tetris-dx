@@ -2,48 +2,42 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tetris DX</title>
   <style>
-    * {
-      box-sizing: border-box;
+    body {
       margin: 0;
-      padding: 0;
-    }
-    html, body {
-      width: 100%;
-      height: 100%;
-      background-color: #0b0f19;
-      overflow: hidden;
+      background-color: #111;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
-    }
-    #game-container {
-      width: 100vw;
-      height: 100dvh;
-      max-width: 600px;
-      position: relative;
+      min-height: 100vh;
+      font-family: sans-serif;
+      color: white;
     }
     #game {
-      width: 100%;
-      height: 100%;
+      width: 640px;
+      height: 480px;
+      max-width: 95vw;
+      max-height: 80vh;
     }
   </style>
 </head>
 <body>
 
-  <div id="game-container">
+  <h2 style="margin-bottom: 10px;">Tetris DX (Game Boy Color)</h2>
+
+  <div style="width: 100%; display: flex; justify-content: center;">
     <div id="game"></div>
   </div>
 
   <script>
-    EJS_player = '#game';
-    EJS_core = 'gb';
-    EJS_gameUrl = './tetris.gbc';
-    EJS_pathtodata = 'https://cdn.emulatorjs.org/stable/data/ [cdn.emulatorjs.org]';
-    EJS_startOnLoaded = false;
-    EJS_alignStartButton = 'center';
+    window.EJS_player = '#game';
+    window.EJS_core = 'gb';
+    window.EJS_gameUrl = 'tetris.gbc';
+    window.EJS_pathtodata = 'https://cdn.emulatorjs.org/stable/data/ [cdn.emulatorjs.org]';
+    window.EJS_startOnLoaded = false;
   </script>
   <script src="https://cdn.emulatorjs.org/stable/data/loader.js [cdn.emulatorjs.org]"></script>
 
